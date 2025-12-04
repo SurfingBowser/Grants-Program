@@ -10,7 +10,10 @@
 
 This application is a follow-up grant to "Preparing Polkadot's `pallet_balances` for Formal Verification using the Inference Framework" ([completed & merged](https://github.com/w3f/Grants-Program/pull/2606) September 9th 2025).
 
-Establishing verified mathematical foundations for Polkadot balance operations through axiomatization of core infrastructure components.
+We plan to apply our Rocq-based framework [Inference](https://github.com/Inferara/inference-language-spec/blob/main/README.md) to create formally verified specifications.
+
+ Inference is designed as a domain‑specific formal specification language. By blending conservative procedural syntax with novel semantics of controllable non-determinism, it aims to let developers write formal specifications in a way that resembles writing unit tests. Designed with bearing similarities to classical imperative language in mind, Inference can be quickly understood and used by existing Polkadot developers. Through intermediate representation of purposefully extended WASM, such specifications are supposed to be translated into Rocq theories, allowing computer-assisted formal verification in a state-of-the-art interactive theorem prover. Inference seeks to bridge the gap between theorem proving and practical application development in blockchains. This approach provides a way to integrate formal verification into the development process of Polkadot projects.
+
 
 This project implements the **[Foundation Phase](https://github.com/Inferara/pallet-balances-formal-verification/blob/main/preparation/preparing-polkadot-pallet-balances-for-formal-verification.md#foundation-phase-infrastructure-axiomatization)** of the incremental verification roadmap established in our previous grant report. While the prior work successfully isolated `pallet_balances` functionality into a verifiable `balances_contract` artifact and produced comprehensive structural analysis, actual formal verification was identified as requiring a systematic bottom-up approach.
 
@@ -201,8 +204,8 @@ By introducing non-deterministic specifications, we aim to lower the barrier for
 
 ### Team members
 
-- Georgii Plotnikov (Rust Lead)
 - Maxim Savchenko (Formal Methods Lead, PhD in mathematics)
+- Xuanrui Qi (Rust and Mathematics)
 
 ### Contact
 
@@ -219,19 +222,24 @@ By introducing non-deterministic specifications, we aim to lower the barrier for
 
 ### Team's experience
 
-**Georgii Plotnikov**
-
-Writing code since 2013\
-Developing Web3 since 2022\
-Started [Inferara](https://inferara.com) in Jan 2024\
-[St. Petersburg Polytechnic University](https://english.spbstu.ru/), Mathematical modeling of information systems, MS.
-
-
 **Maxim Savchenko**\
 Researcher since 2005\
 MSU Algorithmic Languages, MS\
 [St Petersburg University](https://english.spbu.ru/), [Influence of additional information asymmetry on the solutions of non-antagonistic games](https://disser.spbu.ru/zashchita-uchenoj-stepeni-spbgu/882-savchenko-maksim-alekseevich.html), PhD\
 [Mathnet Publications](https://www.mathnet.ru/php/person.phtml?option_lang=eng&personid=147678)
+
+
+**Xuanrui Qi**\
+Writing code since 2014\
+Developing in Web3 since 2020\
+Academic experience in formal methods & programming language design\
+Ph.D. MS in Mathematical Science\
+[Type theory and the logic of toposes](https://scholar.google.co.il/citations?view_op=view_citation&hl=ja&user=s4pAtswAAAAJ&citation_for_view=s4pAtswAAAAJ:IjCSPb-OGe4C)  
+MS in Computer Science from
+[Nagoya University](https://en.nagoya-u.ac.jp/)
+
+
+
 
 
 ## Team Code Repos
@@ -243,13 +251,11 @@ MSU Algorithmic Languages, MS\
 - https://github.com/Inferara/merkle-tree-wasm-spec
 
 Github accounts of team members
-- https://github.com/0xGeorgii
+- https://github.com/xuanruiqi
 - https://github.com/Keyholder
 
-### Team LinkedIn Profiles (if available)
-
-- https://www.linkedin.com/in/0xgeorgii/
-
+## Google Scholar Profiles 
+- [Xuanrui Qi](https://scholar.google.co.il/citations?user=s4pAtswAAAAJ&hl=ja)
 ## Development Status :open_book:
 
 #### **Prior Work:**
